@@ -1,0 +1,99 @@
+*{
+	color: white;
+	font-family: "微软雅黑";
+	margin: 0px;
+	padding: 0px;
+}
+a{
+	text-decoration: none;
+	display: block;	
+}
+ul{
+	z-index: 4;
+	list-style: none;
+}
+#menu ul li{
+	float: left;
+	padding: 0 10px;
+	line-height: 40px;
+	text-align: center;
+	position: relative;
+}
+#menu ul li ul{
+	position: absolute;
+	left: 0px;
+	top: 40px;
+	display: none;
+}
+#menu ul li ul li{
+	margin-top: 2px;
+	width: 120px;
+	background-color: #999;
+}
+#menu ul li ul li ul{
+	left: 140px;
+	top: -2px;
+	position: absolute;
+}
+#menu ul li ul li ul li{
+	margin-top: 2px;
+	width: 120px;
+}
+ul li:hover{
+	background-color: #06F;
+}
+#menu ul li:hover ul{
+	display: block;
+}
+#menu ul li:hover ul li ul
+{
+	display: none;
+}
+#menu ul li:hover ul li:hover ul{
+	display: block;
+}
+#menu ul li ul li:hover{
+	background-color: #06F;
+}
+#back{
+	position: fixed;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	z-index: -1;
+}
+#head{
+	font-family: Arial;
+	float: left;
+	position: absolute;
+	left: 10px;
+}
+#lesson{
+	font-size: 80px;
+}
+#lecturer{
+	font-size: 25px
+}
+#menu{
+	width: 500px;
+	height: 40px;
+	color:white;
+	float: left;
+	top: 46px;
+	left: 450px;
+	position: absolute;
+}
+.main{
+	position: absolute; 
+	top: 180px; 
+	text-align: left; 
+	text-indent: 2em; 
+	width: 100%;
+}
+.recordcode{
+	width:100%; 
+	position:fixed; 
+	bottom:0px; 
+	text-align:center;
+}

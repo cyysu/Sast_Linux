@@ -1,0 +1,132 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel="icon" href="/image/qing_1.ico">
+	<title>sastlinux</title>
+	<link href="style.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+	<div id="back">    
+		<img src="/image/linux.jpg" height="100%" width="100%"/>    
+	</div>  
+	<div id="head">
+		<div id="lesson">
+		Sast-Linux
+		</div>
+		<div id="lecturer">
+		讲师：林恩怜&陈润青
+		</div>
+	</div>
+	<div id="menu">
+		<ul>
+			<li><a href="/">首页</a></li>
+			<li><a href="#">课程</a>
+				<ul>
+					<li><a href="#">认识&了解</a>
+						<ul>
+							<li><a href="/courseware/00">历史&远程控制</a></li>
+							<li><a href="/courseware/01">简单文件操作</a></li>
+							<li><a href="/courseware/02">启动&引导</a></li>
+							<li><a href="/courseware/03">认识shell</a></li>
+						</ul>
+					</li>
+					<li><a href="#">文件&目录</a>
+						<ul>
+							<li><a href="/courseware/04">文件&目录管理</a></li>
+							<li><a href="/courseware/05">命令(一般常用)</a></li>
+							<li><a href="/courseware/06">文件权限</a></li>
+						</ul>
+					</li>
+					<li><a href="#">文本流</a>
+						<ul>
+							<li><a href="/courseware/07">文本查阅</a></li>
+							<li><a href="/courseware/08">文本匹配</a></li>
+							<li><a href="/courseware/09">管道&重定向</a></li>
+						</ul>
+					</li>
+					<li><a href="#">文件系统</a>
+						<ul>
+							<li><a href="/courseware/10">结构</li>
+							<li><a href="/courseware/11">命令</li>
+						</ul>
+					</li>
+					<li><a href="/courseware/12">磁盘操作</a></li>
+					<li><a href="/courseware/13">进程管理</a></li>
+					<li><a href="#">other重要命令</a>
+						<ul>
+							<li><a href="/courseware/14">软硬链接ln</a></li>
+							<li><a href="/courseware/15">搜索find</a></li>
+							<li><a href="/courseware/16">打包压缩tar</a></li>
+							<li><a href="/courseware/17">拷贝转换dd</a></li>
+						</ul>
+					</li>
+					<li><a href="#">开发</a>
+						<ul>
+							<li><a href="/courseware/18">vim</a></li>
+							<li><a href="/courseware/19">gcc</a></li>
+						</ul>
+					</li>
+					<li><a href="/courseware/20">服务器聊天</a></li>
+					<li><a href="/courseware/21">单行多命令</a></li>
+					<li><a href="/courseware/22">sftp文件传输</a></li>
+					<li><a href="/courseware/23">结课</a></li>
+				</ul>
+			</li>
+			<li><a href="#">下载&购买</a>
+				<ul>
+					<li><a href="#">ssh</a>
+						<ul>
+							<li><a href="http://www.chiark.greenend.org.uk/~sgtatham/putty/" target="_blank">PuTTY</a></li>
+							<li><a href="http://www.netsarang.com/products/xsh_overview.html" target="_blank">Xshell</a></li>
+							<li><a href="http://jaist.dl.sourceforge.net/project/filezilla/FileZilla_Client/3.14.1/FileZilla_3.14.1_win64-setup.exe" target="_blank">FileZilla</a></li>
+						</ul>
+					</li>
+					<li><a href="#">虚拟机</a>
+						<ul>
+							<li><a href="https://www.virtualbox.org/" target="_blank">VirtualBox</a></li>
+							<li><a href="http://www.vmware.com/" target="_blank">VMware</a></li>
+						</ul>
+					</li>
+					<li><a href="#">云服务器</a>
+						<ul>
+							<li><a href="https://www.aliyun.com/" target="_blank">阿里云</a></li>
+							<li><a href="https://www.qcloud.com/" target="-blank">腾讯云</a></li>
+						</ul>
+					</li>
+					<li><a href="https://www.realvnc.com/download/viewer/" target="_blank">VNC&nbspViewer</a>
+					<li><a href="http://www.diskgenius.cn/" target="_blank">DiskGenius</a>
+					<li><a href="/download/man.chm">命令速查手册</a>
+				</ul>
+			</li>
+			<li><a href="/about/01">关于</a></li>
+			<li><a href="http://www.njuptsast.org/" target="_blank">Sast主页</a></li>
+			<li><a href="http://linux.vbird.org/" target="_blank">鸟哥私房菜</a></li>
+		</ul>
+	</div>
+	<div id="main" style="position: absolute; top: 180px; left: 2em; right: 2em;text-align: left; text-indent: 2em;">
+	<!--文本添加处-->
+		<p>PS1，回到对Linux最初的印象。</p><br>
+		<img src="image/sh.png"><br><br>
+		<p>其实就是一个黑框，往里面输入一个一个命令，做什么事都是一个个命令，每个命令前面通常有个$或#，为什么是黑白的呢，因为最初的sh(Shell)是不支持颜色的，当然，第一节课同学看到的是这样花花绿绿的。</p><br>
+		<img src="image/putty5.png"><br><br>
+		<p>除了命令的输出可以带颜色以外，命令前面那个“[0aoeiuv@iZ28yt38sl7Z:~]”也可以带颜色的，这里讲的就是前面那一串东西，首先，那个花花绿绿的是我自己设置的，先看看默认的，通过“bash -norc”可以看到bash默认的情况，其实也很简陋。</p><br>
+		<img src="image/bash_norc.png"><br><br>
+		<p>不管怎样，那个字符串都是存在一个名叫“PS1”的变量里的，通过“echo $PS1”可以看见这个变量的内容。</p><br>
+		<img src="image/echo_ps1.png"><br><br>
+		<p>直接改PS1这个变量就可以看到前面显示的字符串立马就变了。</p><br>
+		<img src="image/ps1.png"><br><br>
+		<p>除了直接显示，PS1还有各种高级用法，可以在bash的手册里找到说明，man bash，然后搜索PS1，输入“/PS1”，然后按n表示下一个，直到下图的位置。</p><br>
+		<img src="image/man_bash_ps1.png"><br><br>
+		<p>要能简单看懂英文，看不懂的可以直接试试，因为太多，这里只介绍几个，\u表示用户名，\h表示主机名，\w表示路径，至于颜色，说起来就比较复杂了，有兴趣可以看看或者直接模仿我的PS1，简单的说，换颜色也是通过输出字符实现的，是一个转义字符\e加几个普通字符，然后自己随便改改PS1看看输出的是什么，最好可以把输出保存起来，做个纪念。</p><br>
+		<ul>
+			<li style="line-height: 40px; text-align: center; width: 160px; text-indent: 0em;"><a href="http://blog.sina.com.cn/s/blog_6268defa0100wijx.html" target="_blank">外链:PS1设置</a></li><br>
+			<li style="line-height: 40px; text-align: center; width: 120px; text-indent: 0em;"><a href="/courseware/00/02"></a></li>
+		</ul>
+	</div>
+	<div class="recordcode">
+		<a href="http://www.beian.gov.cn/" title="链接至信息产业部备案管理系统" target="_blank">
+		</a>
+	</div>
+</body>
+</html>

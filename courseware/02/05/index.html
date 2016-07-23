@@ -1,0 +1,179 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel="icon" href="/image/qing_1.ico">
+	<title>sastlinux</title>
+	<link href="style.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+	<div id="back">    
+		<img src="/image/linux.jpg" height="100%" width="100%"/>    
+	</div>  
+	<div id="head">
+		<div id="lesson">
+		Sast-Linux
+		</div>
+		<div id="lecturer">
+		讲师：林恩怜&陈润青
+		</div>
+	</div>
+	<div id="menu">
+		<ul>
+			<li><a href="/">首页</a></li>
+			<li><a href="#">课程</a>
+				<ul>
+					<li><a href="#">认识&了解</a>
+						<ul>
+							<li><a href="/courseware/00">历史&远程控制</a></li>
+							<li><a href="/courseware/01">简单文件操作</a></li>
+							<li><a href="/courseware/02">启动&引导</a></li>
+							<li><a href="/courseware/03">认识shell</a></li>
+						</ul>
+					</li>
+					<li><a href="#">文件&目录</a>
+						<ul>
+							<li><a href="/courseware/04">文件&目录管理</a></li>
+							<li><a href="/courseware/05">命令(一般常用)</a></li>
+							<li><a href="/courseware/06">文件权限</a></li>
+						</ul>
+					</li>
+					<li><a href="#">文本流</a>
+						<ul>
+							<li><a href="/courseware/07">文本查阅</a></li>
+							<li><a href="/courseware/08">文本匹配</a></li>
+							<li><a href="/courseware/09">管道&重定向</a></li>
+						</ul>
+					</li>
+					<li><a href="#">文件系统</a>
+						<ul>
+							<li><a href="/courseware/10">结构</li>
+							<li><a href="/courseware/11">命令</li>
+						</ul>
+					</li>
+					<li><a href="/courseware/12">磁盘操作</a></li>
+					<li><a href="/courseware/13">进程管理</a></li>
+					<li><a href="#">other重要命令</a>
+						<ul>
+							<li><a href="/courseware/14">软硬链接ln</a></li>
+							<li><a href="/courseware/15">搜索find</a></li>
+							<li><a href="/courseware/16">打包压缩tar</a></li>
+							<li><a href="/courseware/17">拷贝转换dd</a></li>
+						</ul>
+					</li>
+					<li><a href="#">开发</a>
+						<ul>
+							<li><a href="/courseware/18">vim</a></li>
+							<li><a href="/courseware/19">gcc</a></li>
+						</ul>
+					</li>
+					<li><a href="/courseware/20">服务器聊天</a></li>
+					<li><a href="/courseware/21">单行多命令</a></li>
+					<li><a href="/courseware/22">sftp文件传输</a></li>
+					<li><a href="/courseware/23">结课</a></li>
+				</ul>
+			</li>
+			<li><a href="#">下载&购买</a>
+				<ul>
+					<li><a href="#">ssh</a>
+						<ul>
+							<li><a href="http://www.chiark.greenend.org.uk/~sgtatham/putty/" target="_blank">PuTTY</a></li>
+							<li><a href="http://www.netsarang.com/products/xsh_overview.html" target="_blank">Xshell</a></li>
+							<li><a href="http://jaist.dl.sourceforge.net/project/filezilla/FileZilla_Client/3.14.1/FileZilla_3.14.1_win64-setup.exe" target="_blank">FileZilla</a></li>
+						</ul>
+					</li>
+					<li><a href="#">虚拟机</a>
+						<ul>
+							<li><a href="https://www.virtualbox.org/" target="_blank">VirtualBox</a></li>
+							<li><a href="http://www.vmware.com/" target="_blank">VMware</a></li>
+						</ul>
+					</li>
+					<li><a href="#">云服务器</a>
+						<ul>
+							<li><a href="https://www.aliyun.com/" target="_blank">阿里云</a></li>
+							<li><a href="https://www.qcloud.com/" target="-blank">腾讯云</a></li>
+						</ul>
+					</li>
+					<li><a href="https://www.realvnc.com/download/viewer/" target="_blank">VNC&nbspViewer</a>
+					<li><a href="http://www.diskgenius.cn/" target="_blank">DiskGenius</a>
+					<li><a href="/download/man.chm">命令速查手册</a>
+				</ul>
+			</li>
+			<li><a href="/about/01">关于</a></li>
+			<li><a href="http://www.njuptsast.org/" target="_blank">Sast主页</a></li>
+			<li><a href="http://linux.vbird.org/" target="_blank">鸟哥私房菜</a></li>
+		</ul>
+	</div>
+	<div id="main" style="position: absolute; top: 180px; left: 2em; right: 2em;text-align: left; text-indent: 2em;">
+	<!--文本添加处-->
+		<p>虚拟机，试试在虚拟机装Linux，首先声明，这不是必需的，后面的课程主要是通过远程控制来完成，不一定非要有个Linux，自己装Linux，哪怕是在虚拟机装，也是比较折腾人的，一节课装个系统的话就什么都干不了了，所以建议是有打算更深入学习Linux的同学，在课后时间自己安装上Linux。</p><br>
+		<p>首先要知道虚拟机是什么，其实就是通过软件模拟出一台电脑需要的硬件，也就是用来在电脑里运行一台电脑，相对于“虚拟机”来说，安装虚拟机软件的被称为“实体机”，“宿主机”，这虚拟机不论发生了什么，都不会对实体机造成多大的影响，一般最多就只是相当于一个程序崩溃了，所以通常虚拟机有被用来做些比较危险的事，比如运行安全性未知的程序，再比如在虚拟机研究启动引导相关的，就不用频繁重启实体机了。</p><br>
+		<p>这里，要做的是在虚拟机里安装Linux，一般常用的虚拟机就是两种，VMware,VitrualBox,两者都是跨平台的，windows，Linux，Mac都有相应的版本，这两个最大的区别就是，VitrualBox是开源免费的，可以直接在官网免费下载使用，如果是上课时间就别下载了，找我copy，VitrualBox下载，然而VMware是收费的，所以下面用VitrualBox。</p><br>
+		<p>其实一个普通软件的简单使用是属于计算机基础的，也就是拿到手上随便点点就要能简单使用，所以这里只上几张图，其他的只要胆大心细，敢于折腾就可以了，一开始也说了，不愿意折腾的可以不装Linux，只用远程控制就够学了。</p><br>
+		<p>新建虚拟机，然后选好自己要装的系统，然后后面的设置比如内存硬盘，默认就好。</p><br>
+		<img src="image/vbox1.png"><br><br>
+		<p>然后开机前，先点设置，在设置里的存储里选个系统镜像ISO做为虚拟机的光驱。</p><br>
+		<img src="image/vbox2.png"><br><br>
+		<p>然后开机时按F12选择CDROM引导。</p><br>
+		<img src="image/vbox3.png"><br><br>
+		<p>然后就能看到进入了Linux。</p><br>
+		<img src="image/vbox4.png"><br><br>
+		<p>通过光盘，免安装的进入的系统叫做LiveCD，各大Linux的发行版都有自己的LiveCD，地位类似安装windows常见的windowsPE，在这个系统里做的修改在重启后都会消失，可以在LiveCD里面安装Linux，Linux出现问题比如密码忘了，可以进LiveCD修复，但于windowsPE不同的是，这个LiveCD的使用体验是和真正安装后的系统完全一样的，LiveCD什么样，装完系统就是什么样，LiveCD里也能安装软件，也能编程，什么都能干，只是重启后都没了，windowsPE只是阉割版的操作系统。</p><br>
+		<p>下面演示下安装远程，这里用的是archbang，安装和上手的难度介于arch和ubuntu，比arch多了图形界面，安装向导，支持离线安装，安装后自带些许常用的程序，比ubuntu少了友好的界面操作(ubuntu可以全程鼠标安装)，以及中文输入法，</p><br>
+		<img src="image/vbox5.png"><br>
+		<img src="image/vbox6.png"><br><br>
+		<p>看上图的安装向导，这里囊括了安装Linux所必需在意的东西，每个都详细介绍也不可能记得住，所以这里就简单说明+举个例子，arch的维基里面有详细的信息，在别的发行版也有很多方面通用的，有需要可以看看。</p><br>
+		<p>1.Keyboard layout</p>
+		<p>键盘布局，就是键盘上的每个键对应的文字和符号，大家都是技术型人才，不能天真的以为键盘上写着什么就能输入什么，其实键盘给电脑发送的只是一个数字，由操作系统决定这个数字意味着什么，这个键盘布局就是这么个作用，我们的的键盘上刻画的符号普遍都是美国(us)，选中文(cn)也是一样的，当然，这个在安装完系统后也是可以改的，只是有点麻烦了，而且不同发行版都一定的区别，</p><br>
+		<img src="image/vbox7.png"><br><br>
+		<p>2.Mirrorlist</p>
+		<p>镜像列表，和装软件有关，要知道，这些有名的Linux发行版，要安装软件是很方便的，因为对于同一个发行版的同一个版本，大家的软件依赖情况是一样的，你安装gcc-5.2需要先安装过glibc-2.22，那么别人也能安装gcc-5.2也是依赖glibc-2.22，那么我把gcc-5.2和glibc-2.22分别打包起来放在网上，然后在数据库里存一条，安装gcc-5.2必需先安装glibc-2.22，这样别人安装gcc-5.2时如果没安装glibc-2.22，系统就可以自动安装glibc-2.22，正常情况这样gcc-5.2就一定可以用了，于是这些软件的安装就变的无比简单，一条命令就确保可用了，比如arch系列的Linux只要"pacman -S gcc"就可以正确安装gcc直接就能做c语言编程了。</p><br>
+		<p>有名的发行版都有这样的软件仓库，被称为软件源(repository)，为了满足世界各地用户的速度，这样的仓库显然不可能只有一个，而这个镜像列表就是确定你打算哪个软件仓库下载软件，至于速度，国内自然是用国内的源比较快，至于具体的源，不同发行版的不同版本的源是不一样的，可以在相应的官网找到源的地址，或者直接百度吧。</p><br>
+		<img src="image/vbox8.png"><br><br>
+		<p>3.Partition Disk</p>
+		<p>硬盘分区，重点，Linux的目录是树状的，根结点/下面有多个文件夹和文件，每个文件夹下又可以有多个文件，也就是说一切都在根结点/下面，与windows的C盘D盘E盘不一样，硬盘分区这一步就是决定根结点/挂载(mount)在哪个硬盘的哪个分区，有的发行版还可以在这一步决定其他任何目录的挂载点，这里不需要。</p><br>
+		<img src="image/vbox9.png"><br><br>
+		<p>如果硬盘没分区的话，要先分区，显然虚拟机创的硬盘是没分区的，这里要区分你想要的分区表MBR还是GPT，MBR用cfdisk创建分区表以及分区，GPT用gdisk，这两都是命令行下相对容易使用的分区工具，以下使用cfdisk，图形界面分区工具一般是用gparted，至于文件系统，一般就ext3就可以了，还有swap(交换)分区不是必要的，是在内存不足时把部分内存换到硬盘上来。</p><br>
+		<img src="image/vbox10.png"><br><br>
+		<p>4.Install ArchBang</p>
+		<p>安装，安装系统到选择的磁盘，这步纯自动，比较慢。</p><br>
+		<img src="image/vbox11.png"><br><br>
+		<p>5.fstab</p>file system table,文件系统列表？这步一般都是用自动生成的，不用改，下图是选择如何指定分区。</p>
+		<p>1是根据在/dev目录下的唯一文件名，如果增加减少硬盘，可能会变。</p>
+		<p>2是根据每个硬盘的唯一识别码 (Universally Unique Identifier)，至少理论上不会出现重复，格式化之类的会变。</p>
+		<p>3是根据标签，这可以自己给分区随便设置的，</p><br>
+		<img src="image/vbox12.png"><br><br>
+		<p>前面讲了挂载，这个文件就是决定每次开机时自动挂载哪些目录，这表就存在/etc/fstab，乱改可导致进不了系统。</p><br>
+		<img src="image/vbox13.png"><br><br>
+		<p>6.Hostname</p>
+		<p>主机名，就是给电脑起个名字，并没有什么重要的作用，而且随时能改的。</p><br>
+		<p>7.Set Clock and Time Zone</p>
+		<p>设置时钟和时区，时区的话，中国大陆就选“Asia”-“Shanghai”</p><br>
+		<img src="image/vbox14.png"><br><br>
+		<p>这里Set Clock不是设置几点几分，这东西存在主板里了，装几个系统都不用改，这里只有两选项，简单介绍，UTC表示主板里存的是伦敦那个标准时间，LOCALTIME表示主板里存的是当地的时间，Linux一般默认是前者，Windows却是后者，所以经常出现双系统的时间差了八小时，有用Windows的话，选后者就可以，用hwclock命令可以改的，hwclock --systohc --utc，hwclock --systohc --localtime。</p><br>
+		<img src="image/vbox15.png"><br><br>
+		<p>8.System Locale</p>
+		<p>系统语言环境，英语一般用美国的en_US，简体中文是zh_CN。</p><br>
+		<img src="image/vbox16.png"><br><br>
+		<p>9.Run Mkinitcpio</p>
+		<p>创建初始化内存盘，看起来很高大上，是用来检测和初始化硬件的，反正全自动的，暂时不需要太了解，知道有这么个东西就好，老版本的可能叫mkinitrd和mkinitramfs，mkinitrd和mkinitramfsmkinitrd和mkinitramfs</p><br>
+		<p>10.Install Bootloader</p>
+		<p>安装引导器，不论是BIOS引导还是EFI引导，都不是直接引导系统，而是引导这个引导器，然后由这个引导器去引导进入系统，最常用的是grub2，这里后面就自动安装了，</p><br>
+		<img src="image/vbox17.png"><br><br>
+		<p>这里有个很重要的，就是这个引导器安装在哪个分区，这里默认了，但一般是要自已选的，但是如果是MBR分区表，要安装在主分区才能引导，或者安装在整个硬盘的头部，这样所有主分区都无法引导了，只能引导这个grub2。</p><br>
+		<img src="image/vbox18.png"><br><br>
+		<p>11.Root Password</p>
+		<p>设置最高权限账户root的密码。</p><br>
+		<p>12.User Accounts</p>
+		<p>添加一个账户，Linux的账户名不能是大写字母，就这些了，有的发行版可能没这么多步骤，说明是默认了一些东西。</p><br>
+		<ul>
+			<li style="line-height: 40px; text-align: center; width: 120px; text-indent: 0em;"><a href="https://wiki.archlinux.org/index.php/Beginners%27_guide_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)" target="_blank">arch安装指南</a></li><br>
+			<li style="line-height: 40px; text-align: center; width: 120px; text-indent: 0em;"><a href="/courseware/00/02"></a></li>
+		</ul>
+	</div>
+	<div class="recordcode">
+		<a href="http://www.beian.gov.cn/" title="链接至信息产业部备案管理系统" target="_blank">
+		</a>
+	</div>
+</body>
+</html>

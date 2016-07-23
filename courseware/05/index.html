@@ -1,0 +1,181 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel="icon" href="/image/qing_1.ico">
+	<title>sastlinux</title>
+	<link href="style.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+	<div id="back">    
+		<img src="/image/linux.jpg" height="100%" width="100%"/>    
+	</div>  
+	<div id="head">
+		<div id="lesson">
+		Sast-Linux
+		</div>
+		<div id="lecturer">
+		讲师：林恩怜&陈润青
+		</div>
+	</div>
+	<div id="menu">
+		<ul>
+			<li><a href="/">首页</a></li>
+			<li><a href="#">课程</a>
+				<ul>
+					<li><a href="#">认识&了解</a>
+						<ul>
+							<li><a href="/courseware/00">历史&远程控制</a></li>
+							<li><a href="/courseware/01">简单文件操作</a></li>
+							<li><a href="/courseware/02">启动&引导</a></li>
+							<li><a href="/courseware/03">认识shell</a></li>
+						</ul>
+					</li>
+					<li><a href="#">文件&目录</a>
+						<ul>
+							<li><a href="/courseware/04">文件&目录管理</a></li>
+							<li><a href="/courseware/05">命令(一般常用)</a></li>
+							<li><a href="/courseware/06">文件权限</a></li>
+						</ul>
+					</li>
+					<li><a href="#">文本流</a>
+						<ul>
+							<li><a href="/courseware/07">文本查阅</a></li>
+							<li><a href="/courseware/08">文本匹配</a></li>
+							<li><a href="/courseware/09">管道&重定向</a></li>
+						</ul>
+					</li>
+					<li><a href="#">文件系统</a>
+						<ul>
+							<li><a href="/courseware/10">结构</li>
+							<li><a href="/courseware/11">命令</li>
+						</ul>
+					</li>
+					<li><a href="/courseware/12">磁盘操作</a></li>
+					<li><a href="/courseware/13">进程管理</a></li>
+					<li><a href="#">other重要命令</a>
+						<ul>
+							<li><a href="/courseware/14">软硬链接ln</a></li>
+							<li><a href="/courseware/15">搜索find</a></li>
+							<li><a href="/courseware/16">打包压缩tar</a></li>
+							<li><a href="/courseware/17">拷贝转换dd</a></li>
+						</ul>
+					</li>
+					<li><a href="#">开发</a>
+						<ul>
+							<li><a href="/courseware/18">vim</a></li>
+							<li><a href="/courseware/19">gcc</a></li>
+						</ul>
+					</li>
+					<li><a href="/courseware/20">服务器聊天</a></li>
+					<li><a href="/courseware/21">单行多命令</a></li>
+					<li><a href="/courseware/22">sftp文件传输</a></li>
+					<li><a href="/courseware/23">结课</a></li>
+				</ul>
+			</li>
+			<li><a href="#">下载&购买</a>
+				<ul>
+					<li><a href="#">ssh</a>
+						<ul>
+							<li><a href="http://www.chiark.greenend.org.uk/~sgtatham/putty/" target="_blank">PuTTY</a></li>
+							<li><a href="http://www.netsarang.com/products/xsh_overview.html" target="_blank">Xshell</a></li>
+							<li><a href="http://jaist.dl.sourceforge.net/project/filezilla/FileZilla_Client/3.14.1/FileZilla_3.14.1_win64-setup.exe" target="_blank">FileZilla</a></li>
+						</ul>
+					</li>
+					<li><a href="#">虚拟机</a>
+						<ul>
+							<li><a href="https://www.virtualbox.org/" target="_blank">VirtualBox</a></li>
+							<li><a href="http://www.vmware.com/" target="_blank">VMware</a></li>
+						</ul>
+					</li>
+					<li><a href="#">云服务器</a>
+						<ul>
+							<li><a href="https://www.aliyun.com/" target="_blank">阿里云</a></li>
+							<li><a href="https://www.qcloud.com/" target="-blank">腾讯云</a></li>
+						</ul>
+					</li>
+					<li><a href="https://www.realvnc.com/download/viewer/" target="_blank">VNC&nbspViewer</a>
+					<li><a href="http://www.diskgenius.cn/" target="_blank">DiskGenius</a>
+					<li><a href="/download/man.chm">命令速查手册</a>
+				</ul>
+			</li>
+			<li><a href="/about/01">关于</a></li>
+			<li><a href="http://www.njuptsast.org/" target="_blank">Sast主页</a></li>
+			<li><a href="http://linux.vbird.org/" target="_blank">鸟哥私房菜</a></li>
+		</ul>
+	</div>
+	<div id="main" style="position: absolute; top: 180px; left: 2em; right: 2em;text-align: left; text-indent: 2em;">
+	<!--文本添加处-->
+		<p>先补充下上节课说漏的地方，1.mv的重命名的作用，2.参数的全称和简称。</p>
+		<p>然后讲讲上节课的作业:</p>
+		<p>1.我想把ls -a缩写成la，该怎样做？</p>
+		<p>alias la='ls -a'</p>
+		<p>2.我想在/home/student里创建一个目录为"homework"，在homework里面把上面在/home/aoeiuv/student目录下的自己的文件复制过来，然后重命名为"你自己的学号wawa"，然后在当前目录下创建rara目录，然后把前面刚重命名的文件复制进去，然后把rara删掉。请写出一连串一系列的操作。</p>
+		<p>cd /home/student</p>
+		<p>mkdir homework</p>
+		<p>cp /home/aoeiuv/student/B15XXXXXX .</p>
+		<p>mv B15XXXXXX B15XXXXXXwawa</p>
+		<p>mkdir rara</p>
+		<p>cp B15XXXXXXwawa rara</p>
+		<p>rm -rf rara</p><br>
+		<p>下来是命令：</p>
+		<p>1.简单计算器：bc</p><br>
+		<img src="image/bc.png"><br><br>
+		<p>2.帮助：man</p><br>
+		<img src="image/man_1.png"><br><br>
+		<p>简要的功能,使用的格式语法,使用的选项。</p><br>
+		<img src="image/man_2.png"><br><br>
+		<p>返回值,0表示没问题,1表示小问题,2表示大问题。</p><br>
+		<img src="image/man_3.png"><br><br>
+		<p>以上是开头那个数字表示的内容。</p><br>
+		<img src="image/man_4.png"><br><br>
+		<p>这是man下大致分成的每个部分。</p><br>
+		<img src="image/man_5.png"><br><br>
+		<p>这是man下的一些操作,常用的就是上下翻页滚动,查找,退出</p><br>
+		<img src="image/man_6.png"><br><br>
+		<p>man -f可以查看目前有多少该命令的帮助文档。</p><br>
+		<img src="image/man_7.png"><br><br>
+		<p>man X 命令可以看特定的帮助文档，默认为搜索到的第一个，一般也是数字较小的那个。</p><br>
+		<img src="image/man_8.png"><br><br>
+		<p>man -k 关键词,在man的命令的简要功能介绍里查找</p>
+		<p>whatis [命令或者是数据] <==相当于 man -f [命令或者是数据]</p> 
+		<p>apropos [命令或者是数据] <==相当于 man -k [命令或者是数据] </p>
+		<p>有兴趣的同学可以看看另外一个帮助命令:info(反正我一般是用man)</p><br>
+		<p>3.数据同步写入磁盘：sync</p>
+		<p>在Linux系统中,为了加快数据的读取速度,在默认的情况中,某些已经加载内存中的数据将不会直接被写回硬盘,而是先缓存在内存当中,这样的话万一系统因为某些特殊情况造成不正常关机(例如停电),由于数据尚未被写入硬盘当中,所以就造成数据的更新不正常。</p><br>
+		<p>4.shutdown [-t 秒] [-arkhncfF] 时间 [警告信息] </p>
+		<p>选项与参数： </p>
+		<p>-t sec ： 几秒后关机 </p>
+		<p>-k ： 没有关机,只是发送警告信息 </p>
+		<p>-r ： 在将系统的服务停掉之后就重新启动(常用) </p>
+		<p>-h ： 将系统的服务停掉后,立即关机(常用) </p>
+		<p>-f ： 关机并启动之后,强制略过fsck的磁盘检查 </p>
+		<p>-F ： 系统重新启动之后,强制进行fsck的磁盘检查 </p>
+		<p>-c ： 取消已经在进行的shutdown命令内容 </p>
+		<p>时间 ： 指定系统关机的时刻</p>
+		<p>其他参数可自己man查看</p><br>
+		<p>关机的命令有:shutdown halt poweroff。</p>
+		<p>shutdown以一种安全的方式关闭系统。所有登陆用户都可以看到关机信息提示，并且 login 将被阻塞。可以指定立刻关机，也可以指定系统在一定的延时后关机。所有进程都将接收到 SIGTERM 信号。这可以使 vi 等程序有时间将处于编辑状态的文件进行存储，邮件和新闻程序进程则可以将所有缓冲池内的数据进行适当的清除等等。 shutdown 通过通知 init 进程，要求它改换运行级别来实现。运行级别 0 用来关闭系统，运行级别 6 用来重启系统，运行级别 1 用来使系统进入执行系统管理任务状态，如果没有给出 -h 或 -r 标志时，这是 shutdown 命令的默认工作状态。</p>
+		<p>halt是最简单的关机命令。其实halt就是调用shutdown -h。halt执行时会杀死应用进程，执行sync系统调用，文件系统写操作完成后就会停止内核。</p>
+		<p>poweroff在关闭计算机操作系统之后，最后还会发送ACPI指令，通知电源，最后切断电源供应，当然路由器等嵌入系统不支持ACPI的，所以这个无效。</p><br>
+		<p>5.重新启动：reboot</p><br>
+		<p>6.切换运行等级：init</p>
+		<p>#0 停机（千万不能把initdefault 设置为0） </p>
+		<p>#1 单用户模式 </p>
+		<p>#2 多用户，没有 NFS(和级别3相似，会停止部分服务) </p>
+		<p>#3 完全多用户模式 </p>
+		<p>#4 没有用到 </p>
+		<p>#5 x11(Xwindow) </p>
+		<p>#6 重新启动（千万不要把initdefault 设置为6）</p>
+		<p>一般常用的是0,3,5,6</p><br>
+		<ul>
+			<li style="line-height: 40px; text-align: center; width: 120px; text-indent: 0em;"><a href="/courseware/00/01"></a></li>
+			<li style="line-height: 40px; text-align: center; width: 120px; text-indent: 0em;"><a href="/courseware/00/02"></a></li>
+		</ul>
+	</div>
+	<div class="recordcode">
+		<a href="http://www.beian.gov.cn/" title="链接至信息产业部备案管理系统" target="_blank">
+		</a>
+	</div>
+</body>
+</html>

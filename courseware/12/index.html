@@ -1,0 +1,203 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel="icon" href="/image/qing_1.ico">
+	<title>sastlinux</title>
+	<link href="style.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+	<div id="back">    
+		<img src="/image/linux.jpg" height="100%" width="100%"/>    
+	</div>  
+	<div id="head">
+		<div id="lesson">
+		Sast-Linux
+		</div>
+		<div id="lecturer">
+		讲师：林恩怜&陈润青
+		</div>
+	</div>
+	<div id="menu">
+		<ul>
+			<li><a href="/">首页</a></li>
+			<li><a href="#">课程</a>
+				<ul>
+					<li><a href="#">认识&了解</a>
+						<ul>
+							<li><a href="/courseware/00">历史&远程控制</a></li>
+							<li><a href="/courseware/01">简单文件操作</a></li>
+							<li><a href="/courseware/02">启动&引导</a></li>
+							<li><a href="/courseware/03">认识shell</a></li>
+						</ul>
+					</li>
+					<li><a href="#">文件&目录</a>
+						<ul>
+							<li><a href="/courseware/04">文件&目录管理</a></li>
+							<li><a href="/courseware/05">命令(一般常用)</a></li>
+							<li><a href="/courseware/06">文件权限</a></li>
+						</ul>
+					</li>
+					<li><a href="#">文本流</a>
+						<ul>
+							<li><a href="/courseware/07">文本查阅</a></li>
+							<li><a href="/courseware/08">文本匹配</a></li>
+							<li><a href="/courseware/09">管道&重定向</a></li>
+						</ul>
+					</li>
+					<li><a href="#">文件系统</a>
+						<ul>
+							<li><a href="/courseware/10">结构</li>
+							<li><a href="/courseware/11">命令</li>
+						</ul>
+					</li>
+					<li><a href="/courseware/12">磁盘操作</a></li>
+					<li><a href="/courseware/13">进程管理</a></li>
+					<li><a href="#">other重要命令</a>
+						<ul>
+							<li><a href="/courseware/14">软硬链接ln</a></li>
+							<li><a href="/courseware/15">搜索find</a></li>
+							<li><a href="/courseware/16">打包压缩tar</a></li>
+							<li><a href="/courseware/17">拷贝转换dd</a></li>
+						</ul>
+					</li>
+					<li><a href="#">开发</a>
+						<ul>
+							<li><a href="/courseware/18">vim</a></li>
+							<li><a href="/courseware/19">gcc</a></li>
+						</ul>
+					</li>
+					<li><a href="/courseware/20">服务器聊天</a></li>
+					<li><a href="/courseware/21">单行多命令</a></li>
+					<li><a href="/courseware/22">sftp文件传输</a></li>
+					<li><a href="/courseware/23">结课</a></li>
+				</ul>
+			</li>
+			<li><a href="#">下载&购买</a>
+				<ul>
+					<li><a href="#">ssh</a>
+						<ul>
+							<li><a href="http://www.chiark.greenend.org.uk/~sgtatham/putty/" target="_blank">PuTTY</a></li>
+							<li><a href="http://www.netsarang.com/products/xsh_overview.html" target="_blank">Xshell</a></li>
+							<li><a href="http://jaist.dl.sourceforge.net/project/filezilla/FileZilla_Client/3.14.1/FileZilla_3.14.1_win64-setup.exe" target="_blank">FileZilla</a></li>
+						</ul>
+					</li>
+					<li><a href="#">虚拟机</a>
+						<ul>
+							<li><a href="https://www.virtualbox.org/" target="_blank">VirtualBox</a></li>
+							<li><a href="http://www.vmware.com/" target="_blank">VMware</a></li>
+						</ul>
+					</li>
+					<li><a href="#">云服务器</a>
+						<ul>
+							<li><a href="https://www.aliyun.com/" target="_blank">阿里云</a></li>
+							<li><a href="https://www.qcloud.com/" target="-blank">腾讯云</a></li>
+						</ul>
+					</li>
+					<li><a href="https://www.realvnc.com/download/viewer/" target="_blank">VNC&nbspViewer</a>
+					<li><a href="http://www.diskgenius.cn/" target="_blank">DiskGenius</a>
+					<li><a href="/download/man.chm">命令速查手册</a>
+				</ul>
+			</li>
+			<li><a href="/about/01">关于</a></li>
+			<li><a href="http://www.njuptsast.org/" target="_blank">Sast主页</a></li>
+			<li><a href="http://linux.vbird.org/" target="_blank">鸟哥私房菜</a></li>
+		</ul>
+	</div>
+	<div id="main" style="position: absolute; top: 180px; left: 2em; right: 2em;text-align: left; text-indent: 2em;">
+	<!--文本添加处-->
+		<p>1.fdisk，fdisk -l:可以直接显示出系统内的所有partition。</p><br>
+		<img src="image/fdisk_l.png"><br><br>
+		<p>fdisk /dev/XdX (不加数字!)，进入到fdisk的操作界面</p>
+		<p>(1)m:帮助</p><br>
+		<img src="image/fdisk_m1.png"><br>
+		<img src="image/fdisk_m2.png"><br><br>
+		<p>(2)w:将之前所有操作写入分区表,也就是正式生效!</p>
+		<p>(3)q:退出，注意:你直接q退出而没有用w写入生效的话,之前所有的操作是无效的！</p>
+		<p>(4)d:删除一个分区</p><br>
+		<img src="image/fdisk_d.png"><br><br>
+		<p>(5)n:新建一个分区，先把所有分区删掉 _(:3 」∠)_。</p><br>
+		<img src="image/fdisk_n1.png"><br><br>
+		<p>然后试试新建一个。</p><br>
+		<img src="image/fdisk_n2.png"><br><br>
+		<p>这里的last sector可以用磁柱数,但推荐用+大小(比如图里的+1G),默认是最后磁柱数，然后就建好了，但是,对于高于2TB的磁盘应该用parted,有兴趣的同学可以课后自己了解。</p><br>
+		<p>2.partprobe:让系统读取新的分区表</p><br>
+		<p>3.mkfs:简单的格式化工具</p><br>
+		<img src="image/mkfs_2.png"><br><br>
+		<p>mkfs -t type 分区:type代表的文件系统类型</p><br>
+		<pre>
+4.mke2fs:创建磁盘分区上的“etc2/etc3”文件系统
+
+	mke2fs [-b block大小] [-L 标头] [-cj] 装置
+	选项与参数：
+	-b ：可以配置每个 block 的大小，目前支持 1024, 2048, 4096 bytes 三种
+	-c ：检查磁盘错误，仅下达一次 -c 时，会进行快速读取测试；
+	如果下达两次 -c -c 的话，会测试读写(read-write)，会很慢
+	-L ：后面可以接标头名称 (Label)，label可以理解成是分区或磁盘的别名
+	-j ：本来 mke2fs 是 EXT2 ，加上 -j 后，会主动加入 journal 而成为 EXT3
+
+	5.fsck(filesystem check):硬盘检查
+
+	fsck [-t 文件系统] [-Cay] 装置名称
+	选项与参数：
+	-a ：自动修复检查到的有问题的扇区
+	-y ：与 -a 类似，但是某些filesystem仅支持 -y 这个参数
+	-C ：在检验的过程当中，使用一个直方图来显示目前的进度
+
+	EXT2/EXT3 的额外选项功能：(e2fsck 这支命令所提供)
+	-f ：强制检查
+	-D ：针对文件系统下的目录进行优化配置
+		</pre>
+		<img src="image/fsck.png"><br><br>
+		<p>由于fsck在扫描硬盘的时候,可能会造成部分filesystem的损坏,所以运行fsck时,被检查的partition务必不可挂载到系统。</p><br>
+		<pre>
+6.badblocks:硬盘检查
+	badblocks -[svw] 装置名称
+	选项与参数：
+	-s ：在屏幕上列出进度
+	-v ：可以在屏幕上看到进度
+	-w ：使用写入的方式来测试，建议不要使用，尤其是待检查的装置已有文件时
+		</pre>
+		<img src="image/badblocks.png"><br><br>
+		<pre>
+7.mount:挂载
+	mount [-l]
+	mount [-L Label名] [-o 额外选项] 装置文件名 挂载点
+	选项与参数：
+	-l ：单纯的输入 mount 会显示目前挂载的信息,加上-l可增列Label名称
+	-L ：系统除了利用装置文件名之外,还可以利用文件系统的标头名称(Label)来进行挂载
+	-o ：后面可以接一些挂载时额外加上的参数,比方说账号、密码、读写权限等：
+	ro, rw: 挂载文件系统成为只读(ro) 或可擦写(rw)
+	async, sync: 此文件系统是否使用同步写入 (sync) 或异步 (async) 的
+	内存机制，默认为 async
+	auto, noauto: 允许此 partition 被以 mount -a 自动挂载(auto)
+	dev, nodev: 是否允许此 partition 上，可创建装置文件？ dev 为可允许
+	suid, nosuid: 是否允许此 partition 含有 suid/sgid 的文件格式？
+	exec, noexec: 是否允许此 partition 上拥有可运行 binary 文件？
+	user, nouser: 是否允许此 partition 让任何使用者运行 mount ？一般来说，
+	mount 仅有 root 可以进行，但下达 user 参数，则可让
+	一般 user 也能够对此 partition 进行 mount
+	defaults: 默认值为：rw, suid, dev, exec, auto, nouser, and async
+	remount: 重新挂载，通常用在系统出错，或重新升级参数时
+		</pre>
+		<img src="image/mount_1.png"><br><br>
+		<p>插上U盘自动挂载，我们在/mnt新建USB目录来把U盘再挂载，再执行一次，它会告诉它在这个目录已经被挂载了，于是加上重挂载remount试试,然后又挂载了一次……</p><br>
+		<img src="image/mount_2.png"><br><br>
+		<p>我们来把它挂成ro(只读)玩玩，然后发现没法新建文件。</p><br>
+		<pre>
+8.unmount:卸除挂载文件
+	umount [-f] 装置文件名或挂载点
+	选项与参数：
+	-f ：强制卸除
+		</pre>
+		<ul>
+			<li style="line-height: 40px; text-align: center; width: 120px; text-indent: 0em;"><a href="/courseware/00/01"></a></li>
+			<li style="line-height: 40px; text-align: center; width: 120px; text-indent: 0em;"><a href="/courseware/00/02"></a></li>
+		</ul>
+	</div>
+	<div class="recordcode">
+		<a href="http://www.beian.gov.cn/" title="链接至信息产业部备案管理系统" target="_blank">
+		</a>
+	</div>
+</body>
+</html>

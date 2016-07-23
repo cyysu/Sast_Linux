@@ -1,0 +1,216 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel="icon" href="/image/qing_1.ico">
+	<title>sastlinux</title>
+	<link href="style.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+	<div id="back">    
+		<img src="/image/linux.jpg" height="100%" width="100%"/>    
+	</div>  
+	<div id="head">
+		<div id="lesson">
+		Sast-Linux
+		</div>
+		<div id="lecturer">
+		讲师：林恩怜&陈润青
+		</div>
+	</div>
+	<div id="menu">
+		<ul>
+			<li><a href="/">首页</a></li>
+			<li><a href="#">课程</a>
+				<ul>
+					<li><a href="#">认识&了解</a>
+						<ul>
+							<li><a href="/courseware/00">历史&远程控制</a></li>
+							<li><a href="/courseware/01">简单文件操作</a></li>
+							<li><a href="/courseware/02">启动&引导</a></li>
+							<li><a href="/courseware/03">认识shell</a></li>
+						</ul>
+					</li>
+					<li><a href="#">文件&目录</a>
+						<ul>
+							<li><a href="/courseware/04">文件&目录管理</a></li>
+							<li><a href="/courseware/05">命令(一般常用)</a></li>
+							<li><a href="/courseware/06">文件权限</a></li>
+						</ul>
+					</li>
+					<li><a href="#">文本流</a>
+						<ul>
+							<li><a href="/courseware/07">文本查阅</a></li>
+							<li><a href="/courseware/08">文本匹配</a></li>
+							<li><a href="/courseware/09">管道&重定向</a></li>
+						</ul>
+					</li>
+					<li><a href="#">文件系统</a>
+						<ul>
+							<li><a href="/courseware/10">结构</li>
+							<li><a href="/courseware/11">命令</li>
+						</ul>
+					</li>
+					<li><a href="/courseware/12">磁盘操作</a></li>
+					<li><a href="/courseware/13">进程管理</a></li>
+					<li><a href="#">other重要命令</a>
+						<ul>
+							<li><a href="/courseware/14">软硬链接ln</a></li>
+							<li><a href="/courseware/15">搜索find</a></li>
+							<li><a href="/courseware/16">打包压缩tar</a></li>
+							<li><a href="/courseware/17">拷贝转换dd</a></li>
+						</ul>
+					</li>
+					<li><a href="#">开发</a>
+						<ul>
+							<li><a href="/courseware/18">vim</a></li>
+							<li><a href="/courseware/19">gcc</a></li>
+						</ul>
+					</li>
+					<li><a href="/courseware/20">服务器聊天</a></li>
+					<li><a href="/courseware/21">单行多命令</a></li>
+					<li><a href="/courseware/22">sftp文件传输</a></li>
+					<li><a href="/courseware/23">结课</a></li>
+				</ul>
+			</li>
+			<li><a href="#">下载&购买</a>
+				<ul>
+					<li><a href="#">ssh</a>
+						<ul>
+							<li><a href="http://www.chiark.greenend.org.uk/~sgtatham/putty/" target="_blank">PuTTY</a></li>
+							<li><a href="http://www.netsarang.com/products/xsh_overview.html" target="_blank">Xshell</a></li>
+							<li><a href="http://jaist.dl.sourceforge.net/project/filezilla/FileZilla_Client/3.14.1/FileZilla_3.14.1_win64-setup.exe" target="_blank">FileZilla</a></li>
+						</ul>
+					</li>
+					<li><a href="#">虚拟机</a>
+						<ul>
+							<li><a href="https://www.virtualbox.org/" target="_blank">VirtualBox</a></li>
+							<li><a href="http://www.vmware.com/" target="_blank">VMware</a></li>
+						</ul>
+					</li>
+					<li><a href="#">云服务器</a>
+						<ul>
+							<li><a href="https://www.aliyun.com/" target="_blank">阿里云</a></li>
+							<li><a href="https://www.qcloud.com/" target="-blank">腾讯云</a></li>
+						</ul>
+					</li>
+					<li><a href="https://www.realvnc.com/download/viewer/" target="_blank">VNC&nbspViewer</a>
+					<li><a href="http://www.diskgenius.cn/" target="_blank">DiskGenius</a>
+					<li><a href="/download/man.chm">命令速查手册</a>
+				</ul>
+			</li>
+			<li><a href="/about/01">关于</a></li>
+			<li><a href="http://www.njuptsast.org/" target="_blank">Sast主页</a></li>
+			<li><a href="http://linux.vbird.org/" target="_blank">鸟哥私房菜</a></li>
+		</ul>
+	</div>
+	<div id="main" style="position: absolute; top: 180px; left: 2em; right: 2em;text-align: left; text-indent: 2em;">
+	<!--文本添加处-->
+		<p>1.&:将命令扔到后台运行</p><br>
+		<img src="image/&_1.png"><br><br>
+		<p>出来的[1]是jobnumber,8005是PID,是该进程的ID,但该命令运行完后,会在屏幕显示Done,虽然命令是在后台运行的,但是它输出的东西依然会显示在屏幕上,然而并不会影响你的输入</p><br>
+		<img src="image/&_2.png"><br><br>
+		<p>比如上图的ls还是照常输出了，如果被这样满屏的东西亮瞎了狗眼,该怎么办呢？上节课的重定向都白学了吗？</p><br>
+		<p>2.[ctrl]+z:将目前的工作丢到后台并且暂停</p><br>
+		<img src="image/^z.png"><br><br>
+		<pre>
+3.jobs:观察目前的后台工作状态
+	jobs [-lrs]
+	选项与参数：
+	-l ：除了列出 job number 与命令串之外，同时列出 PID 的号码；
+	-r ：仅列出正在背景 run 的工作；
+	-s ：仅列出正在背景当中暂停 (stop) 的工作
+		</pre>
+		<img src="image/jobs.png"><br><br>
+		<pre>
+4.fg:将后台工作拿到当前来处理
+	fg %jobnumber
+	选项与参数：
+	%jobnumber:其实%有无都行
+		</pre>
+		<img src="image/fg.png"><br><br>
+		<pre>
+5.bg:在后台的进程状态变成运行中
+	bg %jobnumber
+	选项与参数:
+	%jobnumber:同上
+
+	6.kill:管理背景当中的工作
+	kill -signal %jobnumber
+	kill -signal PID
+	kill -l
+	选项与参数：
+	-l ：列出目前kill能够使用的讯号(signal)
+	signal ：讯号
+	-1 ：重新读取一次参数的配置档
+	-2 ：代表与由键盘输入 [ctrl]-c 同样的动作
+	-9 ：立刻强制删除一个进程
+	-15：以正常的程序方式终止一项工作进程
+		</pre>
+		<img src="image/kill.png"><br><br>
+		<pre>
+7.ps:将某个时间点的程序运行情况显示出来
+	ps aux :观察系统所有的程序数据
+	ps -lA :观察所有系统的数据
+	ps axjf :连同部分程序树状态
+		</pre>
+		<img src="image/ps aux.png"><br><br>
+		<pre>
+8.top:动态观察程序的变化
+	top [-d 数字] | top [-bnp]
+	选项与参数：
+	-d ：接秒数,默认是5秒
+	-b ：以批量的方式运行
+	-n ：与-b搭配,运行多少次
+	-p ：指定PID
+	在 top 运行过程当中可以使用的按键命令：
+	? ：显示在top当中可以输入的按键命令
+	P ：以CPU的使用资源排序显示
+	M ：以Memory的使用资源排序显示
+	N ：以PID来排序
+	T ：由该Process使用的CPU时间累积(TIME+)排序
+	k ：给予某个PID一个讯号(signal)
+	r ：给予某个PID重新制订一个nice
+	q ：离开top
+	这个自己动手试试比较直观
+
+	9.pstree [-A|U] [-up]
+	选项与参数：
+	-A ：各程序树之间的连接以 ASCII 字节来连接
+	-U ：各程序树之间的连接以万国码的字节来连接
+	-p ：并同时列出每个 process 的 PID；
+	-u ：并同时列出每个 process 的所属帐号名称。
+		</pre>
+		<img src="image/pstree_1.png"><br>
+		<img src="image/pstree_2.png"><br><br>
+		<pre>
+10.killall [-iIe] [command name]
+	选项与参数：
+	-i :interactive,若需要删除时,会出现提示
+	-I :忽略大小写
+
+	11.free:观察内存使用情况
+		</pre>
+		<img src="image/free.png"><br><br>
+		<pre>
+12.uname:查阅系统与核心相关信息
+	uname [-asrmi]
+	选项与参数：
+	-a ：所有系统相关的信息，包括底下的数据都会被列出来
+	-s ：系统核心名称
+	-r ：核心的版本
+	-m ：硬件名称
+	-i ：硬件的平台
+		</pre>
+		<img src="image/uname.png"><br>
+		<ul>
+			<li style="line-height: 40px; text-align: center; width: 120px; text-indent: 0em;"><a href="/courseware/00/01"></a></li>
+			<li style="line-height: 40px; text-align: center; width: 120px; text-indent: 0em;"><a href="/courseware/00/02"></a></li>
+		</ul>
+	</div>
+	<div class="recordcode">
+		<a href="http://www.beian.gov.cn/" title="链接至信息产业部备案管理系统" target="_blank">
+		</a>
+	</div>
+</body>
+</html>

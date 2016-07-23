@@ -1,0 +1,152 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel="icon" href="/image/qing_1.ico">
+	<title>sastlinux</title>
+	<link href="style.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+	<div id="back">    
+		<img src="/image/linux.jpg" height="100%" width="100%"/>    
+	</div>  
+	<div id="head">
+		<div id="lesson">
+		Sast-Linux
+		</div>
+		<div id="lecturer">
+		讲师：林恩怜&陈润青
+		</div>
+	</div>
+	<div id="menu">
+		<ul>
+			<li><a href="/">首页</a></li>
+			<li><a href="#">课程</a>
+				<ul>
+					<li><a href="#">认识&了解</a>
+						<ul>
+							<li><a href="/courseware/00">历史&远程控制</a></li>
+							<li><a href="/courseware/01">简单文件操作</a></li>
+							<li><a href="/courseware/02">启动&引导</a></li>
+							<li><a href="/courseware/03">认识shell</a></li>
+						</ul>
+					</li>
+					<li><a href="#">文件&目录</a>
+						<ul>
+							<li><a href="/courseware/04">文件&目录管理</a></li>
+							<li><a href="/courseware/05">命令(一般常用)</a></li>
+							<li><a href="/courseware/06">文件权限</a></li>
+						</ul>
+					</li>
+					<li><a href="#">文本流</a>
+						<ul>
+							<li><a href="/courseware/07">文本查阅</a></li>
+							<li><a href="/courseware/08">文本匹配</a></li>
+							<li><a href="/courseware/09">管道&重定向</a></li>
+						</ul>
+					</li>
+					<li><a href="#">文件系统</a>
+						<ul>
+							<li><a href="/courseware/10">结构</li>
+							<li><a href="/courseware/11">命令</li>
+						</ul>
+					</li>
+					<li><a href="/courseware/12">磁盘操作</a></li>
+					<li><a href="/courseware/13">进程管理</a></li>
+					<li><a href="#">other重要命令</a>
+						<ul>
+							<li><a href="/courseware/14">软硬链接ln</a></li>
+							<li><a href="/courseware/15">搜索find</a></li>
+							<li><a href="/courseware/16">打包压缩tar</a></li>
+							<li><a href="/courseware/17">拷贝转换dd</a></li>
+						</ul>
+					</li>
+					<li><a href="#">开发</a>
+						<ul>
+							<li><a href="/courseware/18">vim</a></li>
+							<li><a href="/courseware/19">gcc</a></li>
+						</ul>
+					</li>
+					<li><a href="/courseware/20">服务器聊天</a></li>
+					<li><a href="/courseware/21">单行多命令</a></li>
+					<li><a href="/courseware/22">sftp文件传输</a></li>
+					<li><a href="/courseware/23">结课</a></li>
+				</ul>
+			</li>
+			<li><a href="#">下载&购买</a>
+				<ul>
+					<li><a href="#">ssh</a>
+						<ul>
+							<li><a href="http://www.chiark.greenend.org.uk/~sgtatham/putty/" target="_blank">PuTTY</a></li>
+							<li><a href="http://www.netsarang.com/products/xsh_overview.html" target="_blank">Xshell</a></li>
+							<li><a href="http://jaist.dl.sourceforge.net/project/filezilla/FileZilla_Client/3.14.1/FileZilla_3.14.1_win64-setup.exe" target="_blank">FileZilla</a></li>
+						</ul>
+					</li>
+					<li><a href="#">虚拟机</a>
+						<ul>
+							<li><a href="https://www.virtualbox.org/" target="_blank">VirtualBox</a></li>
+							<li><a href="http://www.vmware.com/" target="_blank">VMware</a></li>
+						</ul>
+					</li>
+					<li><a href="#">云服务器</a>
+						<ul>
+							<li><a href="https://www.aliyun.com/" target="_blank">阿里云</a></li>
+							<li><a href="https://www.qcloud.com/" target="-blank">腾讯云</a></li>
+						</ul>
+					</li>
+					<li><a href="https://www.realvnc.com/download/viewer/" target="_blank">VNC&nbspViewer</a>
+					<li><a href="http://www.diskgenius.cn/" target="_blank">DiskGenius</a>
+					<li><a href="/download/man.chm">命令速查手册</a>
+				</ul>
+			</li>
+			<li><a href="/about/01">关于</a></li>
+			<li><a href="http://www.njuptsast.org/" target="_blank">Sast主页</a></li>
+			<li><a href="http://linux.vbird.org/" target="_blank">鸟哥私房菜</a></li>
+		</ul>
+	</div>
+	<div id="main" style="position: absolute; top: 180px; left: 2em; right: 2em;text-align: left; text-indent: 2em;">
+	<!--文本添加处-->
+		<p>1.观察文件类型：file，比如你要打开一个文件，但是因为不知道它是二进制文件还是普通的文本文件在考虑用什么命令查看，这个时候就可以先用file查看该文件的真正格式。</p><br>
+		<img src="image/file.png"><br><br>
+		<p>经过百度之后，知道ELF一般是二进制文件或可执行文件，所以用xxd或od查看文件内容，另外data格式的文件也是二进制数据文件，因此也用xxd或od查看。</p><br>
+		<p>2.文件系统通常会将这两部份的数据分别存放在不同的区块，权限与属性放置到inode中，至于实际数据则放置到data block区块中。另外，还有一个超级区块(superblock)会记录整个文件系统的整体信息，包括 inode 与 block 的总量、使用量、剩余量等。每个 inode 与 block 都有编号，至于这三个数据的意义可以简略说明如下：</p>
+		<p>superblock：记录此filesystem的整体信息，包括inode/block的总量、使用量、剩余量，以及文件系统的格式与相关信息等。</p>
+		<p>inode：记录文件的属性，一个文件占用一个inode，同时记录此文件的数据所在的block号码。</p>
+		<p>block：实际记录文件的内容，若文件太大时，会占用多个block。</p><br>
+		<img src="image/filesystem_1.jpg"><br><br>
+		<p>这种数据存取的方法称为索引式文件系统(indexed allocation)。</p><br>
+		<img src="image/filesystem_3.jpg"><br><br>
+		<p>data block是用来放置文件内容数据地方，在Ext2中所支持的block大小有1K,2K及4K三种而已。在格式化时block的大小就固定了，且每个block都有编号，以方便inode的记录，当然，相应的大小有相应的限制。</p><br>
+		<img src="image/filesystem_2.png"><br><br>
+		<p>inode记录的文件数据至少有底下这些：该文件的存取模式(read/write/excute)，该文件的拥有者与群组(owner/group)，该文件的容量，该文件创建或状态改变的时间(ctime)，最近一次的读取时间(atime)，最近修改的时间(mtime)，该文件真正内容的指向 (pointer)。</p>
+		<p>inode的特点：每个inode大小均固定为128bytes，每个文件都仅会占用一个inode，所记录的权限与用户是否符合，若符合才能够开始实际读取block的内容。</p><br>
+		<img src="image/inode.jpg"><br><br>
+		<p>系统将inode记录block的区域定义为12个直接,一个间接,一个双间接与一个三间接记录。</p><br>
+		<p>Superblock是记录整个filesystem相关信息的地方，记录的信息主要有：</p>
+		<p>block与inode的总量</p>
+		<p>未使用与已使用的inode/block数量</p>
+		<p>block与inode的大小</p>
+		<p>filesystem的挂载时间、最近一次写入数据的时间、最近一次检验磁盘 (fsck) 的时间等文件系统的相关信息</p>
+		<p>valid bit数值，若此文件系统已被挂载，则valid bit为0，若未被挂载，则valid bit为1</p>
+		<p>Filesystem Description (文件系统描述说明)，这个区段可以描述每个block group的开始与结束的block号码，以及说明每个区段(superblock,bitmap,inodemap,data block)分别介于哪一个block号码之间。</p>
+		<p>block bitmap (区块对照表)，从block bitmap当中可以知道block哪些已经被使用，哪些还没被使用。</p>
+		<p>inode bitmap(inode 对照表)，与block bitmap类似，但inode bitmap是记录使用与未使用的inode号码。</p><br>
+		<img src="image/filesystem_4.png"><br><br>
+		<p>那么从目录树看，假如要读取/etc/passwd这个文件：</p>
+		<p>1./ 的 inode：找到 / 的 inode，且 inode 规范的权限让我们可以读取该 block 的内容(有 r 与 x)。</p>
+		<p>2./ 的 block：经过上个步骤取得 block 的号码，并找到该内容有 etc/ 目录的 inode 号码。</p>
+		<p>3.etc/ 的 inode：读取etc/的 inode 得知当前用户具有 r 与 x 的权限，因此可以读取 etc/ 的 block 内容。</p>
+		<p>4.etc/ 的 block：经过上个步骤取得 block 号码，并找到该内容有 passwd 文件的 inode 号码。</p>
+		<p>5.passwd 的 inode：读取 passwd 的inode 得知当前用户具有 r 的权限，因此可以读取 passwd 的 block 内容。</p>
+		<p>6.passwd 的 block：最后将该 block 内容的数据读出来。</p><br>
+		<ul>
+			<li style="line-height: 40px; text-align: center; width: 120px; text-indent: 0em;"><a href="/courseware/00/01"></a></li>
+			<li style="line-height: 40px; text-align: center; width: 120px; text-indent: 0em;"><a href="/courseware/00/02"></a></li>
+		</ul>
+	</div>
+	<div class="recordcode">
+		<a href="http://www.beian.gov.cn/" title="链接至信息产业部备案管理系统" target="_blank">
+		</a>
+	</div>
+</body>
+</html>

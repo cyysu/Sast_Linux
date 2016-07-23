@@ -1,0 +1,208 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel="icon" href="/image/qing_1.ico">
+	<title>sastlinux</title>
+	<link href="style.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+	<div id="back">    
+		<img src="/image/linux.jpg" height="100%" width="100%"/>    
+	</div>  
+	<div id="head">
+		<div id="lesson">
+		Sast-Linux
+		</div>
+		<div id="lecturer">
+		讲师：林恩怜&陈润青
+		</div>
+	</div>
+	<div id="menu">
+		<ul>
+			<li><a href="/">首页</a></li>
+			<li><a href="#">课程</a>
+				<ul>
+					<li><a href="#">认识&了解</a>
+						<ul>
+							<li><a href="/courseware/00">历史&远程控制</a></li>
+							<li><a href="/courseware/01">简单文件操作</a></li>
+							<li><a href="/courseware/02">启动&引导</a></li>
+							<li><a href="/courseware/03">认识shell</a></li>
+						</ul>
+					</li>
+					<li><a href="#">文件&目录</a>
+						<ul>
+							<li><a href="/courseware/04">文件&目录管理</a></li>
+							<li><a href="/courseware/05">命令(一般常用)</a></li>
+							<li><a href="/courseware/06">文件权限</a></li>
+						</ul>
+					</li>
+					<li><a href="#">文本流</a>
+						<ul>
+							<li><a href="/courseware/07">文本查阅</a></li>
+							<li><a href="/courseware/08">文本匹配</a></li>
+							<li><a href="/courseware/09">管道&重定向</a></li>
+						</ul>
+					</li>
+					<li><a href="#">文件系统</a>
+						<ul>
+							<li><a href="/courseware/10">结构</li>
+							<li><a href="/courseware/11">命令</li>
+						</ul>
+					</li>
+					<li><a href="/courseware/12">磁盘操作</a></li>
+					<li><a href="/courseware/13">进程管理</a></li>
+					<li><a href="#">other重要命令</a>
+						<ul>
+							<li><a href="/courseware/14">软硬链接ln</a></li>
+							<li><a href="/courseware/15">搜索find</a></li>
+							<li><a href="/courseware/16">打包压缩tar</a></li>
+							<li><a href="/courseware/17">拷贝转换dd</a></li>
+						</ul>
+					</li>
+					<li><a href="#">开发</a>
+						<ul>
+							<li><a href="/courseware/18">vim</a></li>
+							<li><a href="/courseware/19">gcc</a></li>
+						</ul>
+					</li>
+					<li><a href="/courseware/20">服务器聊天</a></li>
+					<li><a href="/courseware/21">单行多命令</a></li>
+					<li><a href="/courseware/22">sftp文件传输</a></li>
+					<li><a href="/courseware/23">结课</a></li>
+				</ul>
+			</li>
+			<li><a href="#">下载&购买</a>
+				<ul>
+					<li><a href="#">ssh</a>
+						<ul>
+							<li><a href="http://www.chiark.greenend.org.uk/~sgtatham/putty/" target="_blank">PuTTY</a></li>
+							<li><a href="http://www.netsarang.com/products/xsh_overview.html" target="_blank">Xshell</a></li>
+							<li><a href="http://jaist.dl.sourceforge.net/project/filezilla/FileZilla_Client/3.14.1/FileZilla_3.14.1_win64-setup.exe" target="_blank">FileZilla</a></li>
+						</ul>
+					</li>
+					<li><a href="#">虚拟机</a>
+						<ul>
+							<li><a href="https://www.virtualbox.org/" target="_blank">VirtualBox</a></li>
+							<li><a href="http://www.vmware.com/" target="_blank">VMware</a></li>
+						</ul>
+					</li>
+					<li><a href="#">云服务器</a>
+						<ul>
+							<li><a href="https://www.aliyun.com/" target="_blank">阿里云</a></li>
+							<li><a href="https://www.qcloud.com/" target="-blank">腾讯云</a></li>
+						</ul>
+					</li>
+					<li><a href="https://www.realvnc.com/download/viewer/" target="_blank">VNC&nbspViewer</a>
+					<li><a href="http://www.diskgenius.cn/" target="_blank">DiskGenius</a>
+					<li><a href="/download/man.chm">命令速查手册</a>
+				</ul>
+			</li>
+			<li><a href="/about/01">关于</a></li>
+			<li><a href="http://www.njuptsast.org/" target="_blank">Sast主页</a></li>
+			<li><a href="http://linux.vbird.org/" target="_blank">鸟哥私房菜</a></li>
+		</ul>
+	</div>
+	<div id="main" style="position: absolute; top: 180px; left: 2em; right: 2em;text-align: left; text-indent: 2em;">
+	<!--文本添加处-->
+		<p>先来讲讲命令的基本格式。</p><br>
+		<img src="image/command.png"><br><br>
+		<p>[]:中括号应该懂吧，c语言教材里面有说，是可有可无的意思。</p><br>
+		<p>然后来看看Linux的目录树结构。</p><br>
+		<img src="image/dirtree.gif"><br><br>
+		<p>然后是相对路径和绝对路径，绝对路径是指目录下的绝对位置，直接到达目标位置，在Linux必须以/开头。相对路径就是指由这个文件所在的路径引起的跟其它文件（或文件夹）的路径关系。如上图来看，假如我当前在dmtsai的目录下，我要打开mydata，我可以这样nano mydata，也可以nano /home/dmstai/mydata</p><br>
+		<p>cd(change directoty)</p><br>
+		<img src="image/cd.png"><br><br>
+		<p>cd [相对路径或绝对路径]</p>
+		<p>cd ~lala:切换到lala的家目录</p>
+		<p>切换到家目录:cd/cd ~</p>
+		<p>切换到上一级目录:cd ..</p>
+		<p>回到之前的目录:cd -</p>
+		<p>绝对路径:cd /var/spool/mail</p>
+		<p>相对路径:cd ../mqueue</p><br>
+		<p>pwd(print working directory)，显示当前目录的完整路径，-P ：显示出确实的路径，而非使用连结(link)路径。</p><br>
+		<img src="image/pwd.png"><br><br>
+		<p>ls [-aAdfFhilnrRSt] 目录名称</p>
+		<p>ls [--color={never,auto,always}] 目录名称</p>
+		<p>ls [--full-time] 目录名称</p>
+		<p>选项与参数：</p>
+		<p>-a ：全部的文件，连同隐藏档( 开头为 . 的文件) 一起列出来(常用)</p>
+		<p>-A ：全部的文件，连同隐藏档，但不包括 . 与 .. 这两个目录</p>
+		<p>-d ：仅列出目录本身，而不是列出目录内的文件数据(常用)</p>
+		<p>-f ：直接列出结果，而不进行排序 (ls 默认会以档名排序)</p>
+		<p>-F ：根据文件、目录等信息，给予附加数据结构，例如：</p>
+		<p>*:代表可运行档； /:代表目录； =:代表 socket 文件； |:代表 FIFO 文件；</p><br>
+		<img src="image/ls1.png"><br><br>
+		<p>-l ：长数据串列出，包含文件的属性与权限等等数据；(常用)</p>
+		<p>-h ：将文件容量以人类较易读的方式(例如 GB, KB 等等)列出来；</p>
+		<p>-i ：列出 inode 号码</p><br>
+		<img src="image/ls2.png"><br><br>
+		<p>-n ：列出 UID 与 GID 而非使用者与群组的名称</p>
+		<p>-r ：将排序结果反向输出，例如：原本档名由小到大，反向则为由大到小</p>
+		<p>-R ：连同子目录内容一起列出来，等于该目录下的所有文件都会显示出来</p><br>
+		<img src="image/ls3.png"><br><br>
+		<p>-S ：以文件容量大小排序，而不是用档名排序</p>
+		<p>-t ：依时间排序，而不是用档名</p>
+		<p>--color=never ：不要依据文件特性给予颜色显示</p>
+		<p>--color=always ：显示颜色</p>
+		<p>--color=auto ：让系统自行依据配置来判断是否给予颜色</p>
+		<p>--full-time ：以完整时间模式 (包含年、月、日、时、分) 输出</p>
+		<p>--time={atime,ctime} ：输出 access 时间或改变权限属性时间 (ctime)，而非内容变更时间 (modification time)</p><br>
+		<img src="image/ls4.png"><br><br>
+		<p>cp(copy)，复制文件或目录</p>
+		<p>cp [-adfilprsu] 来源档(source) 目标档(destination)</p>
+		<p>cp [options] source1 source2 source3 .... directory</p>
+		<p>选项与参数：</p>
+		<p>-a ：相当于-pdr的意思(常用)</p>
+		<p>-p ：连同文件的属性一起复制过去，而非使用默认属性(备份常用)</p>
+		<p>-d ：若来源档为连结档的属性(link file)，则复制连结档属性而非文件本身</p>
+		<p>-r ：复制目录(常用)</p>
+		<p>-f ：强制(force)，若目标文件已经存在且无法开启，则移除后再尝试一次</p><br>
+		<img src="image/cp1.png"><br><br>
+		<p>-i ：若目标档(destination)已经存在时，在覆盖时会先询问动作的进行(常用)</p>
+		<p>-l ：进行硬式连结(hard link)的连结档创建，而非复制文件本身</p>
+		<p>-s ：复制成为符号连结档(symbolic link)</p>
+		<p>-u ：若destination与source不同才进行复制</p><br>
+		<img src="image/cp2.png"><br><br>
+		<p>如果来源档有两个以上，则目的档一定要是目录。</p><br>	
+		<p>rm(remove)，移除文件或目录</p>
+		<p>rm [-fir] 文件或目录</p>
+		<p>选项与参数：</p>
+		<p>-f ：force，强制</p>
+		<p>-i ：互动模式，在删除前会询问使用者是否动作</p>
+		<p>-r ：删除目录</p><br>
+		<img src="image/rm.png"><br><br>
+		<p>mv(move)</p>
+		<p>mv [-fiu] source destination</p>
+		<p>mv [options] source1 source2 source3 .... directory</p>
+		<p>选项与参数：</p>
+		<p>-f ：force 强制的意思，如果目标文件已经存在，不会询问而直接覆盖</p>
+		<p>-i ：若目标文件 (destination) 已经存在时，就会询问是否覆盖</p>
+		<p>-u ：若目标文件已经存在，且source比较新，才会升级(update)</p><br>
+		<img src="image/mv.png"><br><br>
+		<p>basename 路径:提取最后的档名</p>
+		<p>dirname 路径:提取前面的目录名</p>
+		<p>这两个命令主要用于之后的shell script的判断</p><br>
+		<img src="image/basedir.png"><br><br>
+		<p>mkdir(make directory)</p>
+		<p>mkdir [-mp] 目录名称</p>
+		<p>选项与参数：</p>
+		<p>-m ：直接配置文件的权限</p>
+		<p>-p ：帮助你直接将所需要的目录(包含上一级目录)递回创建起来</p><br>
+		<img src="image/mkdir.png"><br><br>
+		<p>rmdir [-p] 目录名称</p>
+		<p>选项与参数：</p>
+		<p>-p ：连同上一级的空的目录删除</p><br>
+		<img src="image/rmdir.png"><br>
+		<ul>
+			<li style="line-height: 40px; text-align: center; width: 120px; text-indent: 0em;"><a href="/courseware/00/01"></a></li>
+			<li style="line-height: 40px; text-align: center; width: 120px; text-indent: 0em;"><a href="/courseware/00/02"></a></li>
+		</ul>
+	</div>
+	<div class="recordcode">
+		<a href="http://www.beian.gov.cn/" title="链接至信息产业部备案管理系统" target="_blank">
+		</a>
+	</div>
+</body>
+</html>
